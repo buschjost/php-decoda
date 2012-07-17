@@ -245,9 +245,9 @@ abstract class DecodaFilter extends DecodaAbstract {
          * Sets the renderer for the template of a tag.
          *
          * @access public
-         * @param RendererInterface $renderer 
+         * @param TemplateEngineInterface $renderer 
          */
-        public function setTemplateEngine(RendererInterface $renderer) {
+        public function setTemplateEngine(TemplateEngineInterface $renderer) {
                 $this->_templateEngine = $renderer;
         }
         
@@ -256,7 +256,7 @@ abstract class DecodaFilter extends DecodaAbstract {
          * be used. 
          *
          * @access public
-         * @return RendererInterface
+         * @return TemplateEngineInterface
          */
         public function getTemplateEngine() {
                 if ($this->_templateEngine === null) {
