@@ -67,13 +67,13 @@ abstract class DecodaFilter extends DecodaAbstract {
 	 */
 	protected $_tags = array();
         
-        /**
-         * The used tempalte engine
-         *
-         * @access protected
-         * @var TemplateEngineInterface
-         */
-        protected $_templateEngine = null;
+	/**
+	 * The used template engine
+	 *
+	 * @access protected
+	 * @var TemplateEngineInterface
+	 */
+	protected $_templateEngine = null;
 
 	/**
 	 * Return a message string from the parser.
