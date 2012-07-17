@@ -240,32 +240,32 @@ abstract class DecodaFilter extends DecodaAbstract {
 	public function tags() {
 		return $this->_tags;
 	}
-        
-        /**
-         * Sets the renderer for the template of a tag.
-         *
-         * @access public
-         * @param RendererInterface $renderer 
-         */
-        public function setTemplateEngine(RendererInterface $renderer) {
-                $this->_templateEngine = $renderer;
-        }
-        
-        /**
-         * Returns the used template renderer. In case no renderer were set the default php template renderer gonna 
-         * be used. 
-         *
-         * @access public
-         * @return RendererInterface
-         */
-        public function getTemplateEngine() {
-                if ($this->_templateEngine === null) {
-                        // Include just necessary in case the default php renderer gonna be used.
-                        include_once DECODA_TEMPLATE_ENGINE . '/PhpEngine.php';
-                        $this->_templateEngine = new PhpEngine($this);
-                }
+	
+	/**
+	 * Sets the renderer for the template of a tag.
+	 *
+	 * @access public
+	 * @param RendererInterface $renderer 
+	 */
+	public function setTemplateEngine(RendererInterface $renderer) {
+		$this->_templateEngine = $renderer;
+	}
+	
+	/**
+	 * Returns the used template renderer. In case no renderer were set the default php template renderer gonna 
+	 * be used. 
+	 *
+	 * @access public
+	 * @return RendererInterface
+	 */
+	public function getTemplateEngine() {
+		if ($this->_templateEngine === null) {
+			// Include just necessary in case the default php renderer gonna be used.
+			include_once DECODA_TEMPLATE_ENGINE . '/PhpEngine.php';
+			$this->_templateEngine = new PhpEngine($this);
+		}
 
-                return $this->_templateEngine;
-        }
+		return $this->_templateEngine;
+	}
         
 }
